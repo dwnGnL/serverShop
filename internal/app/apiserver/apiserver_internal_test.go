@@ -13,5 +13,5 @@ func TestAPIServer_HandlerPing(t *testing.T) {
 	rec := httptest.NewRecorder()
 	req, _ := http.NewRequest(http.MethodGet, "/ping", nil)
 	s.handlePing().ServeHTTP(rec, req)
-	assert.Equal(t, rec.Body.String(), "pongs")
+	assert.Equal(t, rec.Body.String(), "pong")
 }
